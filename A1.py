@@ -37,7 +37,7 @@ if(sala == 8 and countInteracao < QTD_MINIMA_INTERACAO):
     countInteracao = countInteracao + 1
     
     if(caminho == 1 and countInteracao < QTD_MINIMA_INTERACAO):
-        print("Você está na sala: 9\nParabéns, você venceu!")
+        pass
     
     else:
         sala = (random.choice(salaSorteada)) 
@@ -55,7 +55,7 @@ if(sala == 8 and countInteracao < QTD_MINIMA_INTERACAO):
                 sala = resultCaminho(sala)
 
 
-if(countInteracao < QTD_MINIMA_INTERACAO and sala == 9):
+if(countInteracao < QTD_MINIMA_INTERACAO and sala < 9):
     print("Você está na sala: 9\nParabéns, você venceu!")
 else:
     print("Perdeu! Você realizou 7 ou mais interações")
