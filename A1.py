@@ -37,11 +37,17 @@ if(sala == 8 and countInteracao < QTD_MINIMA_INTERACAO):
     else:
         sala = (random.choice(salaSorteada)) 
    
-        if(countInteracao < QTD_MINIMA_INTERACAO):
+        while(countInteracao < QTD_MINIMA_INTERACAO):
             print("Você está na sala: ", sala)
         
             print(menu(sala))
             caminho = int(input())
+            countInteracao = countInteracao + 1
+    
+            if(caminho == 2 or sala == 6):
+                 sala = sala + 2
+            else:
+                 sala = sala + 1 
 
 
 if(countInteracao < QTD_MINIMA_INTERACAO and sala == 9):
