@@ -29,7 +29,7 @@ while(countInteracao < QTD_MINIMA_INTERACAO and sala < 8):
         sala = resultCaminho(sala)
 
 if(sala == 8 and countInteracao < QTD_MINIMA_INTERACAO):
-    print("\nVocê está na sala: 8")
+    print("Você está na sala: 8")
 
     print(menu(sala))
 
