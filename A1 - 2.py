@@ -18,7 +18,7 @@ def mostrarUsuários(listaUsuários):
 
     if(opçãoLista == 1):
         for usuário in listaUsuários:
-            print("Nome:", usuário["nome"], "Email: ", usuário["email"])
+            print("Nome: ", usuário["nome"], "Email: ", usuário["email"])
     elif(opçãoLista ==2):
         def ordemAlf(str):
             return str["nome"]
@@ -26,7 +26,7 @@ def mostrarUsuários(listaUsuários):
         listaUsuáriosOrdenados = listaUsuários.copy()
         listaUsuáriosOrdenados.sort(key = ordemAlf)
         for usuário in listaUsuáriosOrdenados:
-            print("Nome:", usuário["nome"], "Email: ", usuário["email"])
+            print("Nome: ", usuário["nome"], "Email: ", usuário["email"])
 
 def buscarUsuário(listaUsuários):
     usuárioInformado = input("Digite o nome do usuário:")
@@ -37,7 +37,7 @@ def buscarUsuário(listaUsuários):
     return False
 
 def removerUsuário(listaUsuários):
-    usuárioInformado = input("Digite o email do usuário:")
+    usuárioInformado = input("Digite o email do usuário: ")
 
     for usuário in listaUsuários:
         if(usuário["email"] == usuárioInformado):
@@ -45,7 +45,7 @@ def removerUsuário(listaUsuários):
     return False
 
 def alterarNomeDoUsuário(listaUsuários):
-    usuárioInformado = input("Digite o email do usuário:")
+    usuárioInformado = input("Digite o email do usuário: ")
 
     for usuário in listaUsuários:
         if(usuário["email"] == usuárioInformado):
@@ -67,9 +67,9 @@ def main():
         elif(opção == 2):           
             usuárioInformado = buscarUsuário(listaUsuários)
             if(usuárioInformado == False):
-                print("Usuário não encontrado!")
+                print("Usuário não encontrado!\n")
             else:
-                print("Nome:",usuárioInformado["nome"],"Email:", usuárioInformado["email"])  
+                print("Nome: ",usuárioInformado["nome"],"Email: ", usuárioInformado["email"])  
 
         elif(opção == 3):
             print("[1] - Lista por ordem de cadastro")
@@ -79,16 +79,16 @@ def main():
         elif(opção == 4):
             usuárioInformado = alterarNomeDoUsuário(listaUsuários)
             if(usuárioInformado == False):
-                print("Usuário não encontrado!")
+                print("Usuário não encontrado!\n")
             else:
-                novoNome = input("Digite o novo nome do usuáio:")
+                novoNome = input("Digite o novo nome do usuário:")
                 usuárioInformado.update({"nome":novoNome})        
-                print("Usuário alterado!")    
+                print("Usuário alterado!\n")    
 
         elif(opção == 5):
             usuárioInformado = removerUsuário(listaUsuários)           
             if(usuárioInformado == False):
-                print("Usuário não encontrado!")
+                print("Usuário não encontrado!\n")
             else:
                 listaUsuários.remove(usuárioInformado)
                 print("Usuário", usuárioInformado["nome"], "removido!")
