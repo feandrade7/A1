@@ -9,8 +9,8 @@ def opções():
 
 def criarUsuário():
     cadastrarUsuário = {}
-    cadastrarUsuário["nome"] = input("Digite seu nome completo: ")
-    cadastrarUsuário["email"] = input("Digite seu email: ")
+    cadastrarUsuário["nome"] = input("Digite o nome completo: ")
+    cadastrarUsuário["email"] = input("Digite o email: ")
     return cadastrarUsuário
 
 def mostrarUsuários(listaUsuários):
